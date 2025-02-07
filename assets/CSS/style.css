@@ -162,6 +162,7 @@ header .logo::before{
     background-color: var(--cl-white);
     border-bottom-left-radius: 100px;
     border-bottom-right-radius: 100px;
+    height: 100vh;
 }
 .hero .main{
     width: 100%;
