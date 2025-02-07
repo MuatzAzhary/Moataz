@@ -264,6 +264,7 @@ header .logo::before{
     position: relative;
     z-index: 22;
     rotate: -10deg;
+    width: fit-content;
 }
 .sec-title{
     position: relative;
