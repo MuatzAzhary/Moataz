@@ -1,33 +1,43 @@
-// ---------------- Variables ----------------
-let projects = document.querySelectorAll('.boxs #open-modal');
-let projectCards = document.querySelectorAll('.modal');
+load.classList.add('active');
+window.onload = ()=>{
+    // ---------------- Variables ----------------
+    let projects = document.querySelectorAll('.boxs #open-modal');
+    let projectCards = document.querySelectorAll('.modal');
+
+    let load = document.getElementById('load');
+    let page = document.querySelector('.page');
+    let modal = document.getElementById('modal');
+    let closeModalBnt = document.querySelectorAll('#close-btn');
 
 
-let modal = document.getElementById('modal');
-let closeModalBnt = document.querySelectorAll('#close-btn');
+    // close modal event
 
-
-// close modal event
-
-closeModalBnt.forEach((el) =>{
-            el.addEventListener('click', () => {
-                projectCards.forEach((p)=>{
-                    p.classList.remove('active');
+    closeModalBnt.forEach((el) =>{
+                el.addEventListener('click', () => {
+                    projectCards.forEach((p)=>{
+                        p.classList.remove('active');
+                    });
+                    document.body.style.overflow = 'auto';
                 });
-                document.body.style.overflow = 'auto';
-            });
-});
+    });
 
-// project items fillter
-projects.forEach((el) => {
-    el.addEventListener('click', (ele) => {
-        document.querySelectorAll((ele.currentTarget.dataset.show)).forEach((el) => {
-            el.classList.add('active');
-            document.body.style.overflow = 'hidden';
+    // project items fillter
+    projects.forEach((el) => {
+        el.addEventListener('click', (ele) => {
+            document.querySelectorAll((ele.currentTarget.dataset.show)).forEach((el) => {
+                el.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
         });
     });
-});
 
+    // ---------------- Events ----------------
+    setTimeout(() => {
+        load.classList.remove('active');
+        page.classList.add('active');
+    }, 2000);
+
+}
 // TODO: Make the website with tow langs
 
 // let langBtnDesc = document.getElementById('lang-btn-desc');
