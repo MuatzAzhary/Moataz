@@ -260,6 +260,7 @@ header .logo::before{
     background-color: var(--cl-white);
     display: flex;
     justify-self: center;
+    align-items: center;
     margin-top: 20px;
     position: relative;
     z-index: 22;
