@@ -261,7 +261,7 @@ header .logo::before{
     display: flex;
     justify-self: center;
     align-items: center;
-    margin-top: 20px;
+    margin: 20px auto 0px !important;
     position: relative;
     z-index: 22;
     rotate: -10deg;
